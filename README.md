@@ -1,13 +1,13 @@
 # Water-Level-Indicator
   The "Water Level Indicator " project aims to develop an automated solution for effective  water management, targeting issues such as water overflow, dry running of pumps, and water  wastage. 
       Code :
+      
       module wle2( 
         input [8:0] lv, 
         output reg [3:0] BCD, 
         output reg [6:0] seg 
       ); 
-     
-    always @(*) begin 
+      always @(*) begin 
         casex(lv) 
             9'b1xxxxxxxx : BCD = 4'b1001; 
             9'b01xxxxxxx   : BCD = 4'b1000; 
